@@ -6,7 +6,7 @@ class Message:
     Message object to use in send_email
     """
     def __init__(self, *,subject='', body=''):
-        """_summary_
+        """Creates message object with content
 
         Args:
             subject (str, optional): subject of email. Defaults to ''.
@@ -16,15 +16,12 @@ class Message:
         self.body = body
 
     def message_content(self) -> tuple[str,str]:
-        """Creates message object with content
-
+        """
         Returns:
             tuple[str,str]: return message tuple with relating content
         """
         return (self.subject, self.body)
         
-
-
 
 def send_email(
         *,
